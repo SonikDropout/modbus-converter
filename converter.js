@@ -54,7 +54,7 @@ function generateOutput(convertedCommands) {
     )
     .join('\r\n\t');
   return `
-socketCreate(SOCKET_NAME, HOST, PORT);
+socketCreate(SOCKET_NAME, '192.168.255.1', 502);
 socketAddListener(SOCKET_NAME, 'connection', sendModBusMessage);
 socketOpen(SOCKET_NAME);
 socketWaitConnection(SOCKET_NAME, 5000);
